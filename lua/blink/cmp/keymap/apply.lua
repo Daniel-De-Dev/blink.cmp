@@ -14,7 +14,7 @@ local function get_desc(commands)
     -- Filter out "fallback" & "fallback_to_mappings"
     if cmd ~= 'fallback' and cmd ~= 'fallback_to_mappings' then
       if type(cmd) == 'string' then
-        -- Substitute all '_' with space, then captilize seperated token
+        -- Substitute all '_' with space, then captilize separated token
         local readable_cmd = cmd:gsub('_', ' ')
         readable_cmd = readable_cmd:gsub('(%a)(%w*)', function(first, rest) return first:upper() .. rest end)
         table.insert(parts, readable_cmd)
